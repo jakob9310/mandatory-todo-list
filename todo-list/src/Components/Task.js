@@ -15,10 +15,9 @@ class Task extends Component {
                 </button>
 
                 <button onClick={() =>
-                    this.props.handleRemove(this.props.index)}>{this.props.todo.done ?
-                    'Undo' : 'remove'}
+                    this.props.handleDelete(this.props.index)}>
+                    Remove
                 </button>
-
             </div>
         )
     }

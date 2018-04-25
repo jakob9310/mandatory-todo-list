@@ -31,8 +31,12 @@ class App extends Component {
           done: false
         };
       const todos = this.state.todos;
-      todos.push(newTodo)
+        todos.push(newTodo)
         this.setState({ todos: todos, inputValue: ''})
+    }
+
+    handleDelete = (itemToBeDeleted) => {
+      console.log(itemToBeDeleted);
     }
 
   render() {
@@ -44,6 +48,7 @@ class App extends Component {
             handleSubmit={this.handleSubmit}
         />
         <List
+            handleDelete={this.handleDelete}
             handleClick={this.handleClick}
             todos={this.state.todos}
         />
